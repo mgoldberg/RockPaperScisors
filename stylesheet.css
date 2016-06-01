@@ -1,3 +1,15 @@
 header{
 	color:red;
 }
+
+#rock{
+	color: brown;
+}
+
+#paper{
+	color:green;
+}
+
+#scisors{
+	color: gray;
+}

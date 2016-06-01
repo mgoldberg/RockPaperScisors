@@ -1,5 +1,16 @@
 <?php
 
+	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+   		if (isset($_POST['rock-submitted'])) {
+        	echo "rock";
+   		} else if (isset($_POST['paper-submitted'])) {
+        	echo "paper";
+   		} else {
+        	echo "scisors";
+   		}
+	}
+
+
 
 ?>
 
@@ -22,18 +33,19 @@
 
 		</div>
 
-		<div id="submit">
-			<input id="form-submitted" type="hidden" name="rockSubmitted" value="true" />
-			<input id="rock" type="submit" value="Rock">
+		<div id="rock">
+			<!--<input id="rock-submitted" type="hidden" name="rockSubmitted" value="true" />-->
+			<input type="submit" name="rock-submitted" value="Rock">
 		</div>	
-		<div id="submit">
-			<input id="form-submitted" type="hidden" name="paperSubmitted" value="true" />
-			<input id="paper" type="submit" value="Paper">
+		<div id="paper">
+			<!--<input id="paper-submitted" type="hidden" name="paperSubmitted" value="true" />-->
+			<input type="submit" name="paper-submitted" value="Paper">
 		</div>
-		<div id="submit">
-			<input id="form-submitted" type="hidden" name="paperSubmitted" value="true" />
-			<input id="paper" type="submit" value="Scisors">
+		<div id="scisors">
+			<!--<input id="scisors-submitted" type="hidden" name="scisorsSubmitted" value="true" />-->
+			<input type="submit" neam="scisors-submitted" value="Scisors">
 		</div>
+
 
 	</body>
 
