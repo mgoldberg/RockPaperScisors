@@ -2,11 +2,35 @@
 
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    		if (isset($_POST['rock-submitted'])) {
-        	echo "rock";
+        	echo "You played rock.";
+        	$computer = rand(1, 3);
+        	if($computer == 1){
+        		echo " Tie!";
+        	} else if($computer == 2){
+        		echo " You lose!";
+        	} else if($computer == 3){
+        		echo " You win!";
+        	}
    		} else if (isset($_POST['paper-submitted'])) {
-        	echo "paper";
+        	echo "You played paper.";
+        	$computer = rand(1, 3);
+        	if($computer == 1){
+        		echo " You win!";
+        	} else if($computer == 2){
+        		echo " Tie!";
+        	} else if($computer == 3){
+        		echo " You lose!";
+        	}
    		} else {
-        	echo "scisors";
+        	echo "You played scisors.";
+        	$computer = rand(1, 3);
+        	if($computer == 1){
+        		echo " You lose!";
+        	} else if($computer == 2){
+        		echo " You win!";
+        	} else if($computer == 3){
+        		echo " Tie!";
+        	}
    		}
 	}
 
