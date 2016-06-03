@@ -1,12 +1,29 @@
+
+<!DOCTYPE HTML>
+
+    <head>
+        <title>Rock, Paper, Scisors</title>
+    </head>
+
+    <body>
+
+        <header id = "main">
+            <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+            Rock Paper Scisors
+        </header>
+<br>
+
+
 <?php
 
 
+	$numberOfThrows = "0";
+	$numberOfWins = "0";
+	$numberOfTies = "0";
+	$numberOfLosses = "0";
+
 
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-		$numberOfThrows = 0;
-		$numberOfWins = 0;
-		$numberOfTies = 0;
-		$numberOfLosses =0;
 		$numberOfThrows = $_POST['numberOfThrows'];
 		$numberOfWins = $_POST['numberOfWins'];
 		$numberOfTies = $_POST['numberOfTies'];
@@ -74,19 +91,6 @@
 
 ?>
 
-<!DOCTYPE HTML>
-
-	<head>
-		<title>Rock, Paper, Scisors</title>
-	</head>
-
-	<body>
-
-		<header id = "main">
-			<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-			Rock Paper Scisors
-		</header>
-
 		<div>
 
 			<form action= "index.php"  method="post">
@@ -98,23 +102,24 @@
 			<input type="hidden" name="numberOfWins" value= "<?php echo $numberOfWins ?>"/>
 			<input type="hidden" name="numberOfTies" value= "<?php echo $numberOfTies ?>"/>
 			<input type="hidden" name="numberOfLosses" value= "<?php echo $numberOfLosses ?>"/>
-			<input type="submit" name="rock-submitted" value="Rock">
+			<input type="submit" id= "rock" name="rock-submitted" value="Rock">
 		</div>	
 		<div id="paper">
 			<input type="hidden" name="numberOfThrows" value= "<?php echo $numberOfThrows ?>"/>
 			<input type="hidden" name="numberOfWins" value= "<?php echo $numberOfWins ?>"/>
 			<input type="hidden" name="numberOfTies" value= "<?php echo $numberOfTies ?>"/>
 			<input type="hidden" name="numberOfLosses" value= "<?php echo $numberOfLosses ?>"/>
-			<input type="submit" name="paper-submitted" value="Paper">
+			<input type="submit" id="paper" name="paper-submitted" value="Paper">
 		</div>
 		<div id="scissors">
 			<input type="hidden" name="numberOfThrows" value= "<?php echo $numberOfThrows ?>"/>
 			<input type="hidden" name="numberOfWins" value= "<?php echo $numberOfWins ?>"/>
 			<input type="hidden" name="numberOfTies" value= "<?php echo $numberOfTies ?>"/>
 			<input type="hidden" name="numberOfLosses" value= "<?php echo $numberOfLosses ?>"/>
-			<input type="submit" neam="scissors-submitted" value="Scissors">
+			<input type="submit" id = "scissors" name="scissors-submitted" value="Scissors">
 		</div>
 
+		</form>
 
 	</body>
 
